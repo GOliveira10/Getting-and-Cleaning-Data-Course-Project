@@ -34,7 +34,7 @@ names(Data)<-gsub("BodyBody", "Body", names(Data))
 names(Data)<-gsub("-meanFreq()", "Mean", names(Data))
 names(Data)<-gsub("-std()", "STD", names(Data))
 
-## Step 4: Create Second Second Tiny Dataset
+## Step 4: Create Second Second Tidy Dataset
 library(plyr);
 tidyData <- aggregate(. ~subject + activity, Data, mean)
 tidyData <- tidyData[order(tidyData$subject,tidyData$activity),]
